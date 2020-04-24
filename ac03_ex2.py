@@ -9,4 +9,8 @@ c.execute('''CREATE TABLE exercicio2
 
 c.execute("INSERT INTO exercicio2 VALUES (1, 'Tiago Prado', 'tiago.prado@aluno.faculdadeimpacta.com.br')")
 
-c.execute("INSERT INTO exercicio2 VALUES (2, 'Bruno dos Santos')")
+c.execute("INSERT INTO exercicio2 VALUES (2, 'Bruno dos Santos', null)")
+
+
+for row in c.execute('SELECT * FROM exercicio2'):
+    print(row)
